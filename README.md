@@ -52,9 +52,10 @@ start index.html
 
 ---
 
+```
 ## 🖥️ Example
 **Input:**
-```
+
 fix(auth): handle token refresh in middleware
 
 - Add Next.js middleware to automatically refresh expiring Strava OAuth tokens
