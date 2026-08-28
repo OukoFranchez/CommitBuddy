@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommitBuddy - Git Commit Formatter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app-container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-icon">📝</div>
+        <div>
+          <h1>CommitBuddy</h1>
+          <p class="subtitle">Format multi-line git commit commands effortlessly</p>
+        </div>
+      </div>
+      <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme" title="Toggle theme">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <div class="card">
+      <div class="input-header">
+        <label for="input" class="label">Commit Message</label>
+        <div class="shell-toggle" role="group" aria-label="Select terminal target">
+          <label class="toggle-option">
+            <input type="radio" name="shell" value="pwsh" checked>
+            <span>PowerShell</span>
+          </label>
+          <label class="toggle-option">
+            <input type="radio" name="shell" value="bash">
+            <span>Bash / Zsh</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="textarea-wrapper">
+        <textarea 
+          id="input" 
+          placeholder="feat(auth): add OAuth2 provider integration&#10;&#10;- Implement Google & GitHub OAuth&#10;- Add token refresh handler&#10;- Update user session schema" 
+          spellcheck="false"
+        ></textarea>
+        <div class="textarea-hint">Tip: Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to copy command</div>
+      </div>
+
+      <div class="output-section">
+        <div class="output-header">
+          <span class="label">Generated Command</span>
+          <button id="copy-btn" class="btn-copy">
+            <span class="copy-text">Copy Command</span>
+          </button>
+        </div>
+        <div class="code-container">
+          <pre id="output"><code>git commit -m "..."</code></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
