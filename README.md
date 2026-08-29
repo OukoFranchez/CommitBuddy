@@ -11,7 +11,7 @@
 - **Live Formatting:** Generates the commit command in real time as you type.
 - **PowerShell & Bash / Zsh Modes:** Seamlessly switch between PowerShell multi-line syntax (``` ` ```) and POSIX Bash syntax (`\`).
 - **Special Character Escaping:** Automatically handles quotes, backticks, and escape characters.
-- **One-Click Copy:** Fast clipboard copying with visual toast feedback.
+- **One-Click Copy & Quick Clear:** Fast clipboard copying with toast feedback and a one-click clear button to reset your input.
 - **Keyboard Shortcut:** Hit `Ctrl + Enter` (or `Cmd + Enter`) to copy instantly.
 - **Light & Dark Mode:** Auto-detects system preferences and persists your choice across sessions.
 

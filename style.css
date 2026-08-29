@@ -100,11 +100,19 @@
     gap: 1.25rem;
   }
   
-  /* Shell Toggle */
+  /* Shell Toggle & Input Actions */
   .input-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .input-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   
   .label {
@@ -261,6 +269,33 @@
   
   .btn-copy.success {
     background: #10b981;
+  }
+
+  .btn-clear {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-clear:hover {
+    background: var(--bg);
+    color: var(--text-main);
+    border-color: var(--text-muted);
+  }
+
+  .btn-clear:active {
+    transform: scale(0.97);
   }
   
   /* Toast */

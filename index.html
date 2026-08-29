@@ -28,15 +28,18 @@
     <div class="card">
       <div class="input-header">
         <label for="input" class="label">Commit Message</label>
-        <div class="shell-toggle" role="group" aria-label="Select terminal target">
-          <label class="toggle-option">
-            <input type="radio" name="shell" value="pwsh" checked>
-            <span>PowerShell</span>
-          </label>
-          <label class="toggle-option">
-            <input type="radio" name="shell" value="bash">
-            <span>Bash / Zsh</span>
-          </label>
+        <div class="input-actions">
+          <button id="clear-btn" class="btn-clear" type="button" aria-label="Clear commit message" title="Clear message">Clear</button>
+          <div class="shell-toggle" role="group" aria-label="Select terminal target">
+            <label class="toggle-option">
+              <input type="radio" name="shell" value="pwsh" checked>
+              <span>PowerShell</span>
+            </label>
+            <label class="toggle-option">
+              <input type="radio" name="shell" value="bash">
+              <span>Bash / Zsh</span>
+            </label>
+          </div>
         </div>
       </div>
 

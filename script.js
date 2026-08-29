@@ -1,6 +1,7 @@
 const inputEl = document.getElementById('input');
 const outputEl = document.getElementById('output');
 const copyBtn = document.getElementById('copy-btn');
+const clearBtn = document.getElementById('clear-btn');
 const themeToggleBtn = document.getElementById('theme-toggle');
 const shellRadios = document.querySelectorAll('input[name="shell"]');
 const toastEl = document.getElementById('toast');
@@ -75,10 +76,22 @@ function toggleTheme() {
   localStorage.setItem('commitbuddy-theme', isDark ? 'dark' : 'light');
 }
 
+function clearInput() {
+  if (!inputEl.value) {
+    showToast('⚠️ Nothing to clear');
+    return;
+  }
+  inputEl.value = '';
+  formatCommit();
+  inputEl.focus();
+  showToast('🗑️ Cleared');
+}
+
 // Event Listeners
 inputEl.addEventListener('input', formatCommit);
 shellRadios.forEach(radio => radio.addEventListener('change', formatCommit));
 copyBtn.addEventListener('click', copyOutput);
+clearBtn.addEventListener('click', clearInput);
 themeToggleBtn.addEventListener('click', toggleTheme);
 
 // Keyboard shortcuts (Ctrl/Cmd + Enter to copy)
